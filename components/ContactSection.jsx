@@ -35,21 +35,21 @@ export function ContactSection() {
 		{
 			icon: Mail,
 			label: "Email",
-			value: "your.email@example.com",
-			href: "mailto:your.email@example.com",
+			value: "udayrajsahu123@gmail.com",
+			href: "mailto:udayrajsahu123@gmail.com",
 			color: "#00FF88",
 		},
 		{
 			icon: Phone,
 			label: "Phone",
-			value: "+1 (555) 123-4567",
-			href: "tel:+15551234567",
+			value: "+917440594711",
+			href: "tel:+917440594711",
 			color: "#00BFFF",
 		},
 		{
 			icon: MapPin,
 			label: "Location",
-			value: "San Francisco, CA",
+			value: "Indore, India",
 			href: null,
 			color: "#8B5CF6",
 		},
@@ -59,19 +59,19 @@ export function ContactSection() {
 		{
 			icon: Github,
 			label: "GitHub",
-			href: "https://github.com",
+			href: "https://github.com/Udayraj-Sahu",
 			color: "#00FF88",
 		},
 		{
 			icon: Linkedin,
 			label: "LinkedIn",
-			href: "https://linkedin.com",
+			href: "https://www.linkedin.com/in/udayraj-sahu/",
 			color: "#00BFFF",
 		},
 		{
 			icon: Mail,
 			label: "Email",
-			href: "mailto:your.email@example.com",
+			href: "mailto:udayrajsahu123@gmail.com",
 			color: "#8B5CF6",
 		},
 	];
@@ -80,18 +80,18 @@ export function ContactSection() {
 		<section
 			id="contact"
 			ref={sectionRef}
-			className="min-h-screen flex items-center py-20 relative">
+			className=" bg-[#0B0F1A]/90  flex items-center py-20 relative">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 				<motion.div
 					initial={{ opacity: 0, y: 50 }}
 					animate={isInView ? { opacity: 1, y: 0 } : {}}
 					transition={{ duration: 0.6 }}
 					className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
-						<span className="text-[#F59E0B]">04.</span>{" "}
-						<span className="text-[#E5E7EB]">Get In Touch</span>
+					<h2 className="text-4xl md:text-5xl lg:text-6xl mb-4 tracking-tight">
+						<span className="text-[#00FF88]">04.</span>{" "}
+						<span className="text-[#E2E8F0]">Get In Touch</span>
 					</h2>
-					<div className="w-32 h-1 bg-gradient-to-r from-[#F59E0B] to-[#EF4444] mx-auto rounded-full" />
+					<div className="w-20 h-0.5 bg-[#00FF88] mx-auto" />
 				</motion.div>
 
 				<div className="grid lg:grid-cols-2 gap-12">
@@ -100,8 +100,8 @@ export function ContactSection() {
 						initial={{ opacity: 0, x: -50 }}
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ delay: 0.2 }}>
-						<div className="bg-[#1C1C1C] p-8 rounded-lg border border-[#00FF88]/20">
-							<h3 className="text-2xl text-[#E5E7EB] mb-6">
+						<div className="bg-[#141824] p-8 rounded-lg border border-[#1E293B]">
+							<h3 className="text-2xl text-[#E2E8F0] mb-6">
 								Send Me a Message
 							</h3>
 
@@ -110,108 +110,77 @@ export function ContactSection() {
 								<div>
 									<label
 										htmlFor="name"
-										className="block text-[#E5E7EB] mb-2">
+										className="block text-[#E2E8F0] mb-2">
 										Name
 									</label>
-									<motion.div
-										animate={{
-											boxShadow:
-												focusedField === "name"
-													? "0 0 20px rgba(0, 255, 136, 0.3)"
-													: "0 0 0px rgba(0, 255, 136, 0)",
-										}}
-										className="rounded-lg transition-all duration-300">
-										<input
-											type="text"
-											id="name"
-											value={formData.name}
-											onChange={(e) =>
-												setFormData({
-													...formData,
-													name: e.target.value,
-												})
-											}
-											onFocus={() =>
-												setFocusedField("name")
-											}
-											onBlur={() => setFocusedField(null)}
-											required
-											className="w-full px-4 py-3 bg-[#0A192F] border border-[#00FF88]/20 rounded-lg text-[#E5E7EB] focus:outline-none focus:border-[#00FF88] transition-colors"
-											placeholder="Your name"
-										/>
-									</motion.div>
+									<input
+										type="text"
+										id="name"
+										value={formData.name}
+										onChange={(e) =>
+											setFormData({
+												...formData,
+												name: e.target.value,
+											})
+										}
+										onFocus={() => setFocusedField("name")}
+										onBlur={() => setFocusedField(null)}
+										required
+										className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#1E293B] rounded-lg text-[#E2E8F0] focus:outline-none focus:border-[#00FF88] transition-colors"
+										placeholder="Your name"
+									/>
 								</div>
 
 								{/* Email Field */}
 								<div>
 									<label
 										htmlFor="email"
-										className="block text-[#E5E7EB] mb-2">
+										className="block text-[#E2E8F0] mb-2">
 										Email
 									</label>
-									<motion.div
-										animate={{
-											boxShadow:
-												focusedField === "email"
-													? "0 0 20px rgba(0, 191, 255, 0.3)"
-													: "0 0 0px rgba(0, 191, 255, 0)",
-										}}
-										className="rounded-lg transition-all duration-300">
-										<input
-											type="email"
-											id="email"
-											value={formData.email}
-											onChange={(e) =>
-												setFormData({
-													...formData,
-													email: e.target.value,
-												})
-											}
-											onFocus={() =>
-												setFocusedField("email")
-											}
-											onBlur={() => setFocusedField(null)}
-											required
-											className="w-full px-4 py-3 bg-[#0A192F] border border-[#00BFFF]/20 rounded-lg text-[#E5E7EB] focus:outline-none focus:border-[#00BFFF] transition-colors"
-											placeholder="your.email@example.com"
-										/>
-									</motion.div>
+									<input
+										type="email"
+										id="email"
+										value={formData.email}
+										onChange={(e) =>
+											setFormData({
+												...formData,
+												email: e.target.value,
+											})
+										}
+										onFocus={() => setFocusedField("email")}
+										onBlur={() => setFocusedField(null)}
+										required
+										className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#1E293B] rounded-lg text-[#E2E8F0] focus:outline-none focus:border-[#00FF88] transition-colors"
+										placeholder="your.email@example.com"
+									/>
 								</div>
 
 								{/* Message Field */}
 								<div>
 									<label
 										htmlFor="message"
-										className="block text-[#E5E7EB] mb-2">
+										className="block text-[#E2E8F0] mb-2">
 										Message
 									</label>
-									<motion.div
-										animate={{
-											boxShadow:
-												focusedField === "message"
-													? "0 0 20px rgba(139, 92, 246, 0.3)"
-													: "0 0 0px rgba(139, 92, 246, 0)",
-										}}
-										className="rounded-lg transition-all duration-300">
-										<textarea
-											id="message"
-											value={formData.message}
-											onChange={(e) =>
-												setFormData({
-													...formData,
-													message: e.target.value,
-												})
-											}
-											onFocus={() =>
-												setFocusedField("message")
-											}
-											onBlur={() => setFocusedField(null)}
-											required
-											rows={5}
-											className="w-full px-4 py-3 bg-[#0A192F] border border-[#8B5CF6]/20 rounded-lg text-[#E5E7EB] focus:outline-none focus:border-[#8B5CF6] transition-colors resize-none"
-											placeholder="Your message..."
-										/>
-									</motion.div>
+									<textarea
+										id="message"
+										value={formData.message}
+										onChange={(e) =>
+											setFormData({
+												...formData,
+												message: e.target.value,
+											})
+										}
+										onFocus={() =>
+											setFocusedField("message")
+										}
+										onBlur={() => setFocusedField(null)}
+										required
+										rows={5}
+										className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#1E293B] rounded-lg text-[#E2E8F0] focus:outline-none focus:border-[#00FF88] transition-colors resize-none"
+										placeholder="Your message..."
+									/>
 								</div>
 
 								{/* Submit Button */}
@@ -220,7 +189,7 @@ export function ContactSection() {
 									disabled={isSubmitting}
 									whileHover={{ scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
-									className="w-full py-4 bg-gradient-to-r from-[#00FF88] to-[#00BFFF] text-[#0A192F] rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
+									className="w-full py-4 bg-[#00FF88] text-[#0B0F1A] rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
 									{isSubmitting ? (
 										<motion.div
 											animate={{ rotate: 360 }}

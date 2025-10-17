@@ -40,12 +40,12 @@ export function ThreeBackground() {
 			new THREE.BufferAttribute(posArray, 3)
 		);
 
-		// Particle material with neon green glow
+		// Particle material - subtle
 		const particlesMaterial = new THREE.PointsMaterial({
-			size: 0.15,
+			size: 0.1,
 			color: 0x00ff88,
 			transparent: true,
-			opacity: 0.8,
+			opacity: 0.3,
 			blending: THREE.AdditiveBlending,
 		});
 
@@ -55,16 +55,16 @@ export function ThreeBackground() {
 		);
 		scene.add(particlesMesh);
 
-		// Add glowing nodes
-		const nodesGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+		// Add subtle nodes
+		const nodesGeometry = new THREE.SphereGeometry(0.3, 16, 16);
 		const nodesMaterial = new THREE.MeshBasicMaterial({
-			color: 0x00bfff,
+			color: 0x00ff88,
 			transparent: true,
-			opacity: 0.6,
+			opacity: 0.2,
 		});
 
 		const nodes = [];
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 15; i++) {
 			const node = new THREE.Mesh(nodesGeometry, nodesMaterial.clone());
 			node.position.set(
 				(Math.random() - 0.5) * 80,
@@ -75,11 +75,11 @@ export function ThreeBackground() {
 			scene.add(node);
 		}
 
-		// Add connecting lines
+		// Add connecting lines - very subtle
 		const linesMaterial = new THREE.LineBasicMaterial({
 			color: 0x00ff88,
 			transparent: true,
-			opacity: 0.2,
+			opacity: 0.05,
 		});
 
 		const lines = [];

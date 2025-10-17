@@ -1,5 +1,5 @@
-'use client'
-import { useRef } from "react";
+"use client";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Palette, Zap } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -33,18 +33,18 @@ export function AboutSection() {
 		<section
 			id="about"
 			ref={sectionRef}
-			className="min-h-screen flex items-center py-20 relative">
+			className=" flex items-center py-20 relative bg-[#0B0F1A]/90 ">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0, y: 50 }}
 					animate={isInView ? { opacity: 1, y: 0 } : {}}
 					transition={{ duration: 0.6 }}
 					className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl mb-4 tracking-tight">
 						<span className="text-[#00FF88]">01.</span>{" "}
-						<span className="text-[#E5E7EB]">About Me</span>
+						<span className="text-[#E2E8F0]">About Me</span>
 					</h2>
-					<div className="w-32 h-1 bg-gradient-to-r from-[#00FF88] to-[#00BFFF] mx-auto rounded-full" />
+					<div className="w-20 h-0.5 bg-[#00FF88] mx-auto" />
 				</motion.div>
 
 				<div className="grid md:grid-cols-2 gap-12 items-center">
@@ -53,7 +53,7 @@ export function AboutSection() {
 						initial={{ opacity: 0, x: -50 }}
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.6, delay: 0.2 }}>
-						<p className="text-[#9CA3AF] mb-6 leading-relaxed">
+						<p className="text-[#94A3B8] mb-6 leading-relaxed">
 							I'm a passionate full-stack developer with a unique
 							blend of technical expertise and creative vision. My
 							journey in web development has led me to master not
@@ -61,7 +61,7 @@ export function AboutSection() {
 							responsive frontends, but also the craft of bringing
 							interfaces to life with stunning animations.
 						</p>
-						<p className="text-[#9CA3AF] mb-6 leading-relaxed">
+						<p className="text-[#94A3B8] mb-6 leading-relaxed">
 							With deep expertise in modern frameworks like
 							Next.js and React, combined with backend
 							technologies like Node.js, Express, Prisma ORM, and
@@ -69,7 +69,7 @@ export function AboutSection() {
 							full-stack solutions that are both powerful and
 							beautiful.
 						</p>
-						<p className="text-[#9CA3AF] mb-8 leading-relaxed">
+						<p className="text-[#94A3B8] mb-8 leading-relaxed">
 							What sets me apart is my mastery of motion design
 							libraries—GSAP, Framer Motion, and Three.js—which I
 							use to transform static interfaces into immersive,
@@ -79,9 +79,9 @@ export function AboutSection() {
 						{/* Stats */}
 						<div className="grid grid-cols-3 gap-4">
 							{[
-								{ label: "Projects", value: "50+" },
-								{ label: "Technologies", value: "20+" },
-								{ label: "Experience", value: "5+ yrs" },
+								{ label: "Projects", value: "5+" },
+								{ label: "Technologies", value: "15+" },
+								{ label: "Experience", value: "1+ yrs" },
 							].map((stat, index) => (
 								<motion.div
 									key={stat.label}
@@ -90,11 +90,11 @@ export function AboutSection() {
 										isInView ? { opacity: 1, scale: 1 } : {}
 									}
 									transition={{ delay: 0.4 + index * 0.1 }}
-									className="text-center p-4 bg-[#1C1C1C] border border-[#00FF88]/20 rounded-lg">
-									<div className="text-2xl text-[#00FF88] mb-1">
+									className="text-center p-4 bg-[#141824] border border-[#1E293B] rounded-lg hover:border-[#00FF88]/30 transition-all duration-300">
+									<div className="text-3xl text-[#00FF88] mb-1">
 										{stat.value}
 									</div>
-									<div className="text-sm text-[#9CA3AF]">
+									<div className="text-sm text-[#64748B]">
 										{stat.label}
 									</div>
 								</motion.div>

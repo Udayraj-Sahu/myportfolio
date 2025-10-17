@@ -37,9 +37,9 @@ export function Navigation() {
 				initial={{ y: -100 }}
 				animate={{ y: 0 }}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${
 					isScrolled
-						? "bg-[#0A192F]/90 backdrop-blur-lg border-b border-[#00FF88]/20"
+						? "bg-[#0B0F1A]/90 backdrop-blur-md border-b border-[#1E293B]"
 						: ""
 				}`}>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +48,9 @@ export function Navigation() {
 						<motion.div
 							whileHover={{ scale: 1.05 }}
 							className="cursor-pointer">
-							<span className="text-2xl font-mono">
+							<span className="text-2xl tracking-wide">
 								<span className="text-[#00FF88]">{"<"}</span>
-								<span className="text-[#E5E7EB]">Dev</span>
-								<span className="text-[#00BFFF]">/</span>
+								<span className="text-[#E2E8F0]">DEV</span>
 								<span className="text-[#00FF88]">{">"}</span>
 							</span>
 						</motion.div>

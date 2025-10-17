@@ -6,7 +6,7 @@ export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="relative py-12 border-t border-[#00FF88]/20">
+		<footer className="relative bg-[#0B0F1A]/90  py-12 border-t border-[#00FF88]/20">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center">
 					{/* Logo */}
@@ -15,10 +15,9 @@ export function Footer() {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						className="mb-6">
-						<span className="text-3xl font-mono">
+						<span className="text-3xl tracking-wide">
 							<span className="text-[#00FF88]">{"<"}</span>
-							<span className="text-[#E5E7EB]">Dev</span>
-							<span className="text-[#00BFFF]">/</span>
+							<span className="text-[#E2E8F0]">DEV</span>
 							<span className="text-[#00FF88]">{">"}</span>
 						</span>
 					</motion.div>
@@ -40,7 +39,7 @@ export function Footer() {
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ delay: 0.3 }}
-						className="flex items-center justify-center gap-2 text-[#9CA3AF] mb-4">
+						className="flex items-center justify-center gap-2 text-[#64748B] mb-4">
 						<span>Designed & Built with</span>
 						<motion.div
 							animate={{
@@ -53,7 +52,7 @@ export function Footer() {
 							}}>
 							<Heart
 								size={16}
-								className="text-[#EF4444] fill-[#EF4444]"
+								className="text-[#00FF88] fill-[#00FF88]"
 							/>
 						</motion.div>
 						<span>and</span>
@@ -66,7 +65,7 @@ export function Footer() {
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ delay: 0.4 }}
-						className="text-sm text-[#9CA3AF]">
+						className="text-sm text-[#64748B]">
 						© {currentYear} Your Name. All rights reserved.
 					</motion.div>
 
@@ -76,8 +75,8 @@ export function Footer() {
 						whileInView={{ opacity: 1 }}
 						viewport={{ once: true }}
 						transition={{ delay: 0.5 }}
-						className="mt-6 text-xs text-[#9CA3AF]">
-						<span className="font-mono">
+						className="mt-6 text-xs text-[#64748B]">
+						<span>
 							Built with Next.js, React, Three.js, GSAP, Framer
 							Motion & TailwindCSS
 						</span>
@@ -90,7 +89,7 @@ export function Footer() {
 					whileInView={{ scaleX: 1 }}
 					viewport={{ once: true }}
 					transition={{ delay: 0.6, duration: 0.8 }}
-					className="mt-8 h-px bg-gradient-to-r from-transparent via-[#00FF88] to-transparent"
+					className="mt-8 h-px bg-gradient-to-r from-transparent via-[#1E293B] to-transparent"
 				/>
 			</div>
 		</footer>
