@@ -1,5 +1,5 @@
-'use client"'
-import { useEffect, useRef, useState } from "react";
+'use client'
+import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Code2, Palette, Zap } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
