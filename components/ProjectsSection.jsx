@@ -69,15 +69,15 @@ export function ProjectsSection() {
 		},
 		{
 			id: 4,
-			title: "Job Portal",
+			title: "Sarah Williams Photography",
 			description:
-				"A modern job portal platform for Silk Chi, offering seamless job search and application experiences.",
+				"Capturing love stories with passion and artistry since 2015.",
 			longDescription:
-				"Job Portal Silk Chi is a user-friendly platform designed to connect job seekers with opportunities at Silk Chi. The portal features advanced search filters, job listings categorized by department, and an intuitive application process. Built with Next.js and TailwindCSS, it ensures a responsive and fast user experience across devices.",
-			image: "https://job-portal-silk-chi.vercel.app/thumbnail.jpg",
+				"Sarah Williams Photography specializes in wedding photography, offering a blend of candid moments and artistic portraits to create timeless images. With over 9 years of experience, Sarah has captured over 500 weddings and 450 happy couples. The website showcases a portfolio of wedding, pre-wedding, reception, candid, and traditional photography, along with detailed service packages and client testimonials.",
+			image: "https://port-swart-psi.vercel.app/images/wedding-reception.jpg",
 			tech: ["Next.js", "TailwindCSS", "Vercel", "React", "Node.js"],
-			github: "https://github.com/Udayraj-Sahu/job-portal",
-			demo: "https://job-portal-silk-chi.vercel.app/",
+			github: "https://github.com/Udayraj-Sahu/port",
+			demo: "https://port-swart-psi.vercel.app/",
 			color: "#00FF88",
 		},
 	];
