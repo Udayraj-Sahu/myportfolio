@@ -6,7 +6,7 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 export function HeroSection() {
 	const [displayedText, setDisplayedText] = useState("");
 	const fullText =
-		"Full-Stack Developer | Motion Enthusiast | Problem Solver";
+		"I build fast, animated web apps that engage users & scale businesses.";
 	const textIndex = useRef(0);
 
 	useEffect(() => {
@@ -84,10 +84,9 @@ export function HeroSection() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.8 }}
 						className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-12 leading-relaxed">
-						I craft immersive digital experiences with cutting-edge
-						animations and robust full-stack solutions. Specializing
-						in GSAP, Framer Motion, Three.js, and modern backend
-						technologies.
+						Full-stack developer specializing in Next.js, React,
+						Node.js & high-impact UI animations (GSAP, Framer
+						Motion, Three.js)
 					</motion.p>
 
 					{/* CTA Buttons */}

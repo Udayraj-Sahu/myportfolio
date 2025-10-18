@@ -54,26 +54,25 @@ export function AboutSection() {
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.6, delay: 0.2 }}>
 						<p className="text-[#94A3B8] mb-6 leading-relaxed">
-							I'm a passionate full-stack developer with a unique
-							blend of technical expertise and creative vision. My
-							journey in web development has led me to master not
-							just the art of building robust backends and
-							responsive frontends, but also the craft of bringing
-							interfaces to life with stunning animations.
+							I’m Udayraj, a full-stack developer who helps
+							startups and agencies turn ideas into engaging,
+							performant, and scalable digital products.
 						</p>
 						<p className="text-[#94A3B8] mb-6 leading-relaxed">
-							With deep expertise in modern frameworks like
-							Next.js and React, combined with backend
-							technologies like Node.js, Express, Prisma ORM, and
-							databases such as Supabase and NeonDB, I create
-							full-stack solutions that are both powerful and
-							beautiful.
-						</p>
-						<p className="text-[#94A3B8] mb-8 leading-relaxed">
-							What sets me apart is my mastery of motion design
-							libraries—GSAP, Framer Motion, and Three.js—which I
-							use to transform static interfaces into immersive,
-							interactive experiences that users remember.
+							<ul>
+								<ul>
+									<li>UI Animations & Motion Design</li>
+									<li>
+										Full-Stack Development (MERN + Prisma +
+										Supabase)
+									</li>
+									<li>
+										API Integrations, Performance
+										Optimization
+									</li>
+									<li>Creative Interactive Experiences</li>
+								</ul>
+							</ul>
 						</p>
 
 						{/* Stats */}
