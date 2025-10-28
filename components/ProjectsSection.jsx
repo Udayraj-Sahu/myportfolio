@@ -69,15 +69,15 @@ export function ProjectsSection() {
 		},
 		{
 			id: 4,
-			title: "Sarah Williams Photography",
+			title: "Rishi Photography",
 			description:
 				"Capturing love stories with passion and artistry since 2015.",
 			longDescription:
 				"Sarah Williams Photography specializes in wedding photography, offering a blend of candid moments and artistic portraits to create timeless images. With over 9 years of experience, Sarah has captured over 500 weddings and 450 happy couples. The website showcases a portfolio of wedding, pre-wedding, reception, candid, and traditional photography, along with detailed service packages and client testimonials.",
-			image: "https://port-swart-psi.vercel.app/images/wedding-reception.jpg",
+			image: "https://colorlib.com/wp/wp-content/uploads/sites/2/wedding-photography-wordpress-themes-1024x745.jpg.avif",
 			tech: ["Next.js", "TailwindCSS", "Vercel", "React", "Node.js"],
 			github: "https://github.com/Udayraj-Sahu/port",
-			demo: "https://port-swart-psi.vercel.app/",
+			demo: "https://rishi-photogrpahy.vercel.app/",
 			color: "#00FF88",
 		},
 	];
