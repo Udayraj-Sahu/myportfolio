@@ -77,7 +77,7 @@ export function ProjectsSection() {
 			image: "https://colorlib.com/wp/wp-content/uploads/sites/2/wedding-photography-wordpress-themes-1024x745.jpg.avif",
 			tech: ["Next.js", "TailwindCSS", "Vercel", "React", "Node.js"],
 			github: "https://github.com/Udayraj-Sahu/port",
-			demo: "https://rishi-photogrpahy.vercel.app/",
+			demo: "https://rishi-photography.vercel.app/",
 			color: "#00FF88",
 		},
 	];
