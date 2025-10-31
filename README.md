@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Udayraj-Sahu's Portfolio
 
-## Getting Started
+A personal portfolio website built using Next.js, Tailwind CSS, and Three.js.
 
-First, run the development server:
+## Features
+
+- Modern and responsive design
+- Showcase of personal projects and achievements
+- Smooth animations and transitions
+- Contact form for inquiries
+
+## Tech Stack
+
+- Next.js: A React framework for server-side rendered applications.
+- Tailwind CSS: A utility-first CSS framework for rapid UI development.
+- Three.js: A cross-browser JavaScript library used to create and display animated 3D computer graphics on a web browser.
+- Lucide React: A set of high-quality, consistent and fully customizable icons.
+- Motion: A library for creating animations and transitions in React.
+
+## Folder Structure
+
+```markdown
+- /components       # Reusable components
+- /pages           # Pages of the application
+- /public          # Public assets
+- /styles          # Global styles and configuration
+- /utils           # Utility functions
+- package.json     # Project metadata and dependencies
+- next.config.js   # Next.js configuration
+- tailwind.config.js # Tailwind CSS configuration
+```
+
+## Installation and Usage
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Udayraj-Sahu/myportfolio.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Build the production version:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing and License
 
-## Learn More
+This project is open source and available for contributions. Please submit a pull request for any changes you'd like to make.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
