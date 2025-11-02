@@ -80,13 +80,52 @@ export function ProjectsSection() {
 			demo: "https://rishi-photography.vercel.app/",
 			color: "#00FF88",
 		},
+		{
+			id: 5,
+			title: "Job Portal",
+			description:
+				"A modern job portal built with Next.js and Supabase — connecting HRs and job seekers in one seamless flow.",
+			longDescription:
+				"The Job Portal streamlines recruitment by allowing job seekers to browse openings without logging in and apply directly via a simple form. HR professionals can manage postings and applications through secure authentication. Built using Next.js, Supabase, TailwindCSS, and Lucide React, the platform features responsive UI, real-time database sync, and smooth animations for an intuitive user experience.",
+			image: "https://cdn.dribbble.com/userupload/15426623/file/original-7b528d8d1468c623ec937cf8ab7a1f95.png?resize=1024x768",
+			tech: [
+				"Next.js",
+				"Supabase",
+				"TailwindCSS",
+				"Lucide React",
+				"React Hook Form",
+				"Framer Motion",
+			],
+			github: "https://github.com/Udayraj-Sahu/Job-Portals",
+			demo: "https://job-portalss.vercel.app/",
+			color: "#00FF88",
+		},
+		{
+			id: 6,
+			title: "GitHub Readme Writer (AI Extension)",
+			description:
+				"A Chrome extension that auto-generates professional README files using AI — saving hours of manual writing.",
+			longDescription:
+				"GitHub Readme Writer is a productivity-focused Chrome extension that analyzes your GitHub repository and automatically creates a polished README.md file. It detects tech stacks, dependencies, and key project structure, then uses AI (Mixtral 8x7B via OpenRouter) to generate a clear, professional README with zero effort. Designed with a clean popup UI, it includes options to preview, copy, or download instantly.",
+			image: "https://cdn.dribbble.com/userupload/13946858/file/original-9b38c63d10f64b7fdf38d4ef65b15c2e.png?resize=1024x768",
+			tech: [
+				"JavaScript",
+				"Chrome API",
+				"HTML",
+				"CSS",
+				"AI (Mixtral via OpenRouter)",
+			],
+			github: "https://github.com/Udayraj-Sahu/extenstion",
+			demo: "https://chrome.google.com/webstore", // Optional link placeholder
+			color: "#00FF88",
+		},
 	];
 
 	return (
 		<section
 			id="projects"
 			ref={sectionRef}
-			className="min-h-screen bg-[#0B0F1A]/90  flex items-center py-20 relative">
+			className="min-h-screen bg-[#0B0F1A]/90 flex items-center py-20 relative">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0, y: 50 }}
@@ -102,6 +141,7 @@ export function ProjectsSection() {
 					<div className="w-20 h-0.5 bg-[#00FF88] mx-auto" />
 				</motion.div>
 
+				{/* Project Cards */}
 				<div className="grid md:grid-cols-2 gap-8">
 					{projects.map((project, index) => (
 						<motion.div
@@ -160,8 +200,6 @@ export function ProjectsSection() {
 								<p className="text-[#94A3B8] text-sm mb-4 leading-relaxed">
 									{project.description}
 								</p>
-
-								{/* Tech Stack */}
 								<div className="flex flex-wrap gap-2">
 									{project.tech.map((tech) => (
 										<span
@@ -172,8 +210,6 @@ export function ProjectsSection() {
 									))}
 								</div>
 							</div>
-
-							{/* Glow effect on hover */}
 							<div
 								className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
 								style={{
@@ -203,14 +239,11 @@ export function ProjectsSection() {
 							style={{
 								borderColor: `${selectedProject.color}40`,
 							}}>
-							{/* Close button */}
 							<button
 								onClick={() => setSelectedProject(null)}
 								className="absolute top-4 right-4 p-2 bg-[#0A192F] rounded-full text-[#E5E7EB] hover:text-[#00FF88] transition-colors">
 								<X size={24} />
 							</button>
-
-							{/* Image */}
 							<div className="relative h-80">
 								<ImageWithFallback
 									src={selectedProject.image}
@@ -219,8 +252,6 @@ export function ProjectsSection() {
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] to-transparent" />
 							</div>
-
-							{/* Content */}
 							<div className="p-8">
 								<h2
 									className="text-3xl mb-4"
@@ -230,8 +261,6 @@ export function ProjectsSection() {
 								<p className="text-[#9CA3AF] mb-6 leading-relaxed">
 									{selectedProject.longDescription}
 								</p>
-
-								{/* Tech Stack */}
 								<div className="mb-6">
 									<h3 className="text-lg text-[#E5E7EB] mb-3">
 										Technologies Used
@@ -251,8 +280,6 @@ export function ProjectsSection() {
 										))}
 									</div>
 								</div>
-
-								{/* Links */}
 								<div className="flex gap-4">
 									<a
 										href={selectedProject.github}
