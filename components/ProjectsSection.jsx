@@ -11,6 +11,29 @@ export function ProjectsSection() {
 
 	const projects = [
 		{
+			id: 0,
+			title: "ShortSync – Multi-Platform Reel Scheduler",
+			description:
+				"An automation tool that lets creators and startups upload Reels to Instagram and YouTube Shorts in one click — with auto captions, scheduling, and analytics.",
+			longDescription:
+				"ShortSync is a full-stack automation platform built for influencers, freelancers, and startups. It connects to Instagram and YouTube APIs, allowing users to upload once and publish Reels across both platforms automatically. Features include AI-generated captions, Google Sheets integration for tracking, scheduling, role-based dashboards, and status syncing in real-time. Built with Next.js, Node.js, MongoDB, and Cloudinary for high-performance automation without sharing any tokens or personal credentials. Each user retains complete ownership of their data.",
+			image: "./shortSync.png",
+			tech: [
+				"Next.js",
+				"TailwindCSS",
+				"Node.js",
+				"MongoDB",
+				"Google Sheets API",
+				"Instagram Graph API",
+				"YouTube Data API",
+				"Cloudinary",
+				"AI Captions",
+			],
+			github: "https://github.com/Udayraj-Sahu/ShortSync",
+			demo: "https://shortsync.vercel.app/",
+			color: "#00FF88",
+		},
+		{
 			id: 1,
 			title: "GoCart",
 			description:
@@ -116,193 +139,7 @@ export function ProjectsSection() {
 				"AI (Mixtral via OpenRouter)",
 			],
 			github: "https://github.com/Udayraj-Sahu/extenstion",
-			demo: "https://chrome.google.com/webstore", // Optional link placeholder
+			demo: "https://chrome.google.com/webstore",
 			color: "#00FF88",
 		},
 	];
-
-	return (
-		<section
-			id="projects"
-			ref={sectionRef}
-			className="min-h-screen bg-[#0B0F1A]/90 flex items-center py-20 relative">
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<motion.div
-					initial={{ opacity: 0, y: 50 }}
-					animate={isInView ? { opacity: 1, y: 0 } : {}}
-					transition={{ duration: 0.6 }}
-					className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl lg:text-6xl mb-4 tracking-tight">
-						<span className="text-[#00FF88]">03.</span>{" "}
-						<span className="text-[#E2E8F0]">
-							Featured Projects
-						</span>
-					</h2>
-					<div className="w-20 h-0.5 bg-[#00FF88] mx-auto" />
-				</motion.div>
-
-				{/* Project Cards */}
-				<div className="grid md:grid-cols-2 gap-8">
-					{projects.map((project, index) => (
-						<motion.div
-							key={project.id}
-							initial={{ opacity: 0, y: 50, rotateY: -10 }}
-							animate={
-								isInView ? { opacity: 1, y: 0, rotateY: 0 } : {}
-							}
-							transition={{ delay: index * 0.1, duration: 0.6 }}
-							whileHover={{ y: -8 }}
-							onClick={() => setSelectedProject(project)}
-							className="group relative bg-[#141824] rounded-lg overflow-hidden cursor-pointer border border-[#1E293B] hover:border-[#00FF88]/50 transition-all duration-300">
-							{/* Project Image */}
-							<div className="relative h-64 overflow-hidden">
-								<ImageWithFallback
-									src={project.image}
-									alt={project.title}
-									className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-[#1C1C1C]/50 to-transparent" />
-
-								{/* Hover overlay */}
-								<motion.div
-									initial={{ opacity: 0 }}
-									whileHover={{ opacity: 1 }}
-									className="absolute inset-0 flex items-center justify-center gap-4"
-									style={{
-										backgroundColor: `${project.color}20`,
-									}}>
-									<motion.a
-										whileHover={{ scale: 1.2 }}
-										href={project.github}
-										target="_blank"
-										rel="noopener noreferrer"
-										onClick={(e) => e.stopPropagation()}
-										className="p-3 bg-[#1C1C1C] rounded-full text-[#E5E7EB] hover:text-[#00FF88] transition-colors">
-										<Github size={24} />
-									</motion.a>
-									<motion.a
-										whileHover={{ scale: 1.2 }}
-										href={project.demo}
-										target="_blank"
-										rel="noopener noreferrer"
-										onClick={(e) => e.stopPropagation()}
-										className="p-3 bg-[#1C1C1C] rounded-full text-[#E5E7EB] hover:text-[#00BFFF] transition-colors">
-										<ExternalLink size={24} />
-									</motion.a>
-								</motion.div>
-							</div>
-
-							{/* Project Info */}
-							<div className="p-6">
-								<h3 className="text-xl mb-2 text-[#E2E8F0] group-hover:text-[#00FF88] transition-colors duration-300">
-									{project.title}
-								</h3>
-								<p className="text-[#94A3B8] text-sm mb-4 leading-relaxed">
-									{project.description}
-								</p>
-								<div className="flex flex-wrap gap-2">
-									{project.tech.map((tech) => (
-										<span
-											key={tech}
-											className="px-3 py-1 text-xs rounded-md bg-[#1E293B] text-[#94A3B8] border border-[#334155]">
-											{tech}
-										</span>
-									))}
-								</div>
-							</div>
-							<div
-								className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-								style={{
-									boxShadow: `0 0 40px ${project.color}40`,
-								}}
-							/>
-						</motion.div>
-					))}
-				</div>
-			</div>
-
-			{/* Project Detail Modal */}
-			<AnimatePresence>
-				{selectedProject && (
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						onClick={() => setSelectedProject(null)}
-						className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-						<motion.div
-							initial={{ scale: 0.8, opacity: 0 }}
-							animate={{ scale: 1, opacity: 1 }}
-							exit={{ scale: 0.8, opacity: 0 }}
-							onClick={(e) => e.stopPropagation()}
-							className="bg-[#1C1C1C] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border"
-							style={{
-								borderColor: `${selectedProject.color}40`,
-							}}>
-							<button
-								onClick={() => setSelectedProject(null)}
-								className="absolute top-4 right-4 p-2 bg-[#0A192F] rounded-full text-[#E5E7EB] hover:text-[#00FF88] transition-colors">
-								<X size={24} />
-							</button>
-							<div className="relative h-80">
-								<ImageWithFallback
-									src={selectedProject.image}
-									alt={selectedProject.title}
-									className="w-full h-full object-cover"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] to-transparent" />
-							</div>
-							<div className="p-8">
-								<h2
-									className="text-3xl mb-4"
-									style={{ color: selectedProject.color }}>
-									{selectedProject.title}
-								</h2>
-								<p className="text-[#9CA3AF] mb-6 leading-relaxed">
-									{selectedProject.longDescription}
-								</p>
-								<div className="mb-6">
-									<h3 className="text-lg text-[#E5E7EB] mb-3">
-										Technologies Used
-									</h3>
-									<div className="flex flex-wrap gap-2">
-										{selectedProject.tech.map((tech) => (
-											<span
-												key={tech}
-												className="px-4 py-2 rounded-lg border"
-												style={{
-													borderColor: `${selectedProject.color}40`,
-													color: selectedProject.color,
-													backgroundColor: `${selectedProject.color}10`,
-												}}>
-												{tech}
-											</span>
-										))}
-									</div>
-								</div>
-								<div className="flex gap-4">
-									<a
-										href={selectedProject.github}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex items-center gap-2 px-6 py-3 bg-[#0A192F] border border-[#00FF88] text-[#00FF88] rounded-lg hover:bg-[#00FF88] hover:text-[#0A192F] transition-all duration-300">
-										<Github size={20} />
-										View Code
-									</a>
-									<a
-										href={selectedProject.demo}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex items-center gap-2 px-6 py-3 bg-[#0A192F] border border-[#00BFFF] text-[#00BFFF] rounded-lg hover:bg-[#00BFFF] hover:text-[#0A192F] transition-all duration-300">
-										<ExternalLink size={20} />
-										Live Demo
-									</a>
-								</div>
-							</div>
-						</motion.div>
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</section>
-	);
-}
