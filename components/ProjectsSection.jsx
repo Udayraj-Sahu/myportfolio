@@ -143,3 +143,53 @@ export function ProjectsSection() {
 			color: "#00FF88",
 		},
 	];
+
+	return (
+		<section ref={sectionRef} className="py-20 bg-black text-white">
+			<h2 className="text-4xl font-bold text-center mb-12">
+				Projects
+			</h2>
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{projects.map((project) => (
+					<motion.div
+						key={project.id}
+						initial={{ opacity: 0, y: 40 }}
+						animate={isInView ? { opacity: 1, y: 0 } : {}}
+						transition={{ delay: project.id * 0.1 }}
+						className="bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+					>
+						<ImageWithFallback
+							src={project.image}
+							alt={project.title}
+							className="w-full h-48 object-cover rounded-xl mb-4"
+						/>
+						<h3 className="text-xl font-semibold mb-2">
+							{project.title}
+						</h3>
+						<p className="text-gray-400 mb-4">
+							{project.description}
+						</p>
+						<div className="flex items-center gap-4">
+							<a
+								href={project.demo}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex items-center gap-2 text-green-400 hover:underline"
+							>
+								<ExternalLink size={16} /> Demo
+							</a>
+							<a
+								href={project.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex items-center gap-2 text-gray-300 hover:text-white"
+							>
+								<Github size={16} /> Code
+							</a>
+						</div>
+					</motion.div>
+				))}
+			</div>
+		</section>
+	);
+}
