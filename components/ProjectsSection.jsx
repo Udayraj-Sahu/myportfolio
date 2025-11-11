@@ -30,7 +30,7 @@ export function ProjectsSection() {
 				"AI Captions",
 			],
 			github: "https://github.com/Udayraj-Sahu/ShortSync",
-			demo: "https://shortsync.vercel.app/",
+			demo: "https://shortsyncs.vercel.app/",
 			color: "#00FF88",
 		},
 		{
